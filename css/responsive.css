@@ -1,0 +1,690 @@
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+/* ========================================
+   TABLETS
+======================================== */
+
+@media (max-width:992px){
+
+        /* ==========================
+    GLOBAL SECTION SPACING
+    ========================== */
+
+   #about,
+    #skills,
+    #projects,
+    #how-i-work,
+    #contact{
+
+        padding: 5rem 0;
+
+    }
+
+        /* ==========================
+    HERO
+    ========================== */
+
+    .hero-container{
+
+        gap: 2.5rem;
+
+    }
+
+    .hero-content h1{
+
+        font-size: 3.5rem;
+
+    }
+
+    .hero-content h2{
+
+        font-size: 2.2rem;
+
+    }
+
+    .hero-description{
+
+        max-width: 95%;
+
+    }
+
+    .hero-image-wrapper{
+
+        width: 280px;
+
+        height: 280px;
+
+    }
+
+        /* ==========================
+    ABOUT
+    ========================== */
+
+    .about-container{
+
+        grid-template-columns: 1fr;
+
+        gap: 3rem;
+
+    }
+
+    .about-image{
+
+        justify-content: center;
+
+    }
+
+    .about-image-card{
+
+        width: 100%;
+
+        max-width: 340px;
+
+    }
+
+    .about-content{
+
+        text-align: center;
+
+    }
+
+    .about-cards{
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 1rem;
+
+    }
+
+    .about-highlights{
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    /* ==========================
+       SKILLS
+    ========================== */
+
+    .skills-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+        /* ==========================
+    PROJECTS
+    ========================== */
+
+    .projects-grid{
+
+        grid-template-columns: 1fr;
+
+    }
+
+        /* ==========================
+    HOW I WORK
+    ========================== */
+
+    .process-grid{
+
+        gap: 1.5rem;
+
+    }
+
+    .process-card{
+
+        padding: 1.8rem;
+
+    }
+
+        /* ==========================
+    CONTACT
+    ========================== */
+
+    .contact-wrapper{
+
+        grid-template-columns: 1fr;
+
+        gap: 3rem;
+
+    }
+
+    .contact-info{
+
+        text-align: center;
+
+    }
+
+    .contact-item{
+
+        padding: 1rem;
+
+    }
+
+        /* ==========================
+    FOOTER
+    ========================== */
+
+    .footer-links{
+
+        gap: 1.5rem;
+
+    }
+
+    .footer-content p{
+
+        max-width: 500px;
+
+    }
+
+}
+
+@media (max-width: 768px){
+
+        /* ==========================
+    GLOBAL SECTION SPACING
+    ========================== */
+
+    #about,
+    #skills,
+    #projects,
+    #how-i-work,
+    #contact{
+
+        padding: 4rem 0;
+
+    }
+
+    /* ==========================
+       NAVBAR
+    ========================== */
+
+    .nav-links{
+        position: fixed;
+
+        top: 80px;
+
+        right: 0;
+
+        width: min(80vw, 320px);
+
+        height: calc(100vh - 80px);
+
+        transform: translateX(100%);
+
+        background: var(--color-bg);
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: flex-start;
+
+        align-items: center;
+
+        gap: 2rem;
+
+        padding-top: 8rem;
+
+        transition: transform .35s ease;
+
+        z-index: 999;
+    }
+
+    .nav-links.active{
+        transform: translateX(0);
+    }
+
+    .resume-btn{
+        display:flex;
+    }
+
+    .menu-toggle{
+         display:flex;
+    }
+
+    .menu-overlay{
+        position: fixed;
+
+        inset: 0;
+
+        background: rgba(0,0,0,.45);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transition: .3s ease;
+
+        z-index: 998;
+    }
+
+    .menu-overlay.active{
+        opacity: 1;
+
+        visibility: visible;
+    }
+
+    .menu-toggle.active span:nth-child(1){
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.active span:nth-child(2){
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3){
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+
+    /* ==========================
+       HERO
+    ========================== */
+
+   #hero{
+        min-height:auto;
+        padding-top:2rem;
+        padding-bottom:4rem;
+    }
+
+    .hero-container{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        gap:3rem;
+    }
+
+    .hero-image{
+        order:-1;
+    }
+
+    .hero-image-wrapper{
+        width:250px;
+        height:250px;
+        margin-top: 1.5rem;
+    }
+
+    .hero-content{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero-content h1{
+        font-size:3rem;
+        margin-top:.5rem;
+    }
+
+    .hero-content h2{
+        font-size:2rem;
+    }
+
+    .hero-description{
+        font-size:1rem;
+        max-width:90%;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        width:100%;
+        gap:1rem;
+        align-items:center;
+    }
+
+    .hero-buttons .btn{
+        width:100%;
+        max-width:280px;
+    }
+
+    .tech-stack{
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:1rem;
+        margin-top: 0;
+    }
+
+        .scroll-indicator{
+
+        display: none;
+
+    }
+
+    /* ==========================
+   ABOUT
+========================== */
+
+.about-container{
+
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
+
+}
+
+.about-image{
+
+    order: -1;
+
+}
+
+.about-image-card{
+
+    width: 100%;
+
+    max-width: 320px;
+
+    margin: 0 auto;
+
+}
+
+.about-content{
+
+    text-align: center;
+
+}
+
+.about-content h3{
+
+    font-size: 1.8rem;
+
+}
+
+.about-highlights{
+
+    grid-template-columns: 1fr;
+
+}
+
+.about-cards{
+
+    grid-template-columns: 1fr;
+
+    gap: 1.25rem;
+
+}
+
+.about-card{
+
+    padding: 1.8rem 1.2rem;
+
+}
+
+/* ==========================
+   SKILLS
+========================== */
+
+.skills-grid{
+
+    grid-template-columns:1fr;
+
+    gap:1.5rem;
+
+}
+
+.skill-card{
+
+    padding:2rem 1.5rem;
+
+}
+
+.skill-icon{
+
+    width:60px;
+
+    height:60px;
+
+}
+
+.skill-icon i{
+
+    font-size:1.8rem;
+
+}
+
+.skill-card h3{
+
+    font-size:1.2rem;
+
+}
+
+.skill-card p{
+
+    font-size:.95rem;
+
+}
+
+/* ==========================
+   PROJECTS
+========================== */
+
+.project-content{
+
+    padding: 1.5rem;
+
+}
+
+.project-content h3{
+
+    font-size: 1.3rem;
+
+}
+
+.project-content p{
+
+    font-size: .95rem;
+
+}
+
+.project-image{
+
+    height: 180px;
+
+}
+
+.project-tech{
+
+    justify-content: center;
+
+}
+
+.project-links{
+
+    flex-direction: column;
+
+    gap: .75rem;
+
+}
+
+.project-links .btn{
+
+    width: 100%;
+
+    text-align: center;
+
+}
+
+/* ==========================
+   HOW I WORK
+========================== */
+
+.process-grid{
+
+    grid-template-columns: 1fr;
+
+    gap: 1.5rem;
+
+}
+
+.process-card{
+
+    padding: 1.8rem 1.5rem;
+
+    text-align: center;
+
+}
+
+.process-number{
+
+    width: 55px;
+
+    height: 55px;
+
+    margin: 0 auto 1.5rem;
+
+}
+
+.process-card h3{
+
+    font-size: 1.3rem;
+
+}
+
+.process-card p{
+
+    font-size: .95rem;
+
+}
+
+/* ==========================
+   CONTACT
+========================== */
+
+.contact-wrapper{
+
+    grid-template-columns: 1fr;
+
+    gap: 2.5rem;
+
+}
+
+.contact-item{
+
+    align-items: center;
+
+    text-align: center;
+
+    flex-direction: column;
+
+    padding: 1.25rem;
+
+}
+
+.contact-item i{
+
+    width: 48px;
+
+    height: 48px;
+
+    font-size: 1.1rem;
+
+}
+
+.contact-form{
+
+    gap: 1.2rem;
+
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    padding: .9rem 1rem;
+
+}
+
+.contact-form .btn{
+
+    width: 100%;
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+
+    padding: 4rem 0 2rem;
+
+}
+
+.footer-content h2{
+
+    font-size: 1.8rem;
+
+}
+
+.footer-content p{
+
+    font-size: .95rem;
+
+    max-width: 100%;
+
+    padding: 0 1rem;
+
+}
+
+.footer-socials{
+
+    gap: .8rem;
+
+    flex-wrap: wrap;
+
+}
+
+.footer-socials a{
+
+    width: 44px;
+
+    height: 44px;
+
+}
+
+.footer-links{
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 1rem;
+
+}
+
+.footer-copy{
+
+    font-size: .85rem;
+
+    padding: 0 1rem;
+
+    line-height: 1.6;
+
+}
+
+/* ==========================
+   BACK TO TOP
+========================== */
+
+.back-to-top{
+
+    width: 45px;
+
+    height: 45px;
+
+    right: 1rem;
+
+    bottom: 1rem;
+
+}
+
+.about-stats{
+
+    grid-template-columns:1fr;
+
+}
+
+}
