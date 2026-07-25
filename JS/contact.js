@@ -78,32 +78,53 @@ form.addEventListener("submit", function (event) {
     submitButton.textContent = "Sending...";
     submitButton.disabled = true;
 
-    setTimeout(() => {
+        emailjs.send(
+        "service_vvvsb5d",
+        "template_8v7utu3",
+        {
+            name: nameInput.value,
+            email: emailInput.value,
+            message: messageInput.value
+        }
+    )
+    .then(() => {
 
-    submitButton.textContent = "Let's Talk →";
-    submitButton.disabled = false;
+        submitButton.textContent = "Let's Talk →";
+        submitButton.disabled = false;
 
-    formMessage.classList.remove("error");
-    formMessage.classList.add("success");
+        formMessage.classList.remove("error");
+        formMessage.classList.add("success");
 
-    formMessage.textContent = "✅ Message sent successfully!";
+        formMessage.textContent = "✅ Message sent successfully!";
 
-    form.reset();
+        form.reset();
 
-    clearError(nameInput);
-    clearError(emailInput);
-    clearError(messageInput);
+        clearError(nameInput);
+        clearError(emailInput);
+        clearError(messageInput);
 
-    setTimeout(() => {
+        setTimeout(() => {
+            formMessage.textContent = "";
+            formMessage.classList.remove("success");
+        }, 3000);
 
-    formMessage.textContent = "";
-    formMessage.classList.remove("success");
+    })
+    .catch((error) => {
 
-    }, 3000);
+        console.error(error);
 
-    }, 2000);
+        submitButton.textContent = "Let's Talk →";
+        submitButton.disabled = false;
 
-    }
+        formMessage.classList.remove("success");
+        formMessage.classList.add("error");
+
+        formMessage.textContent =
+            "❌ Failed to send message. Please try again.";
+
+    });
+
+        }
 });
 
 function showError(input, message) {
@@ -133,4 +154,3 @@ function clearError(input) {
     error.classList.remove("show");
 
 }
-
